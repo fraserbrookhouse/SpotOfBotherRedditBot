@@ -45,6 +45,7 @@ for comment in subreddit.stream.comments():
   for sin in blasphemies:
     if re.search (sin, comment.body, re.IGNORECASE):
       hailmary = words[sin]
-      reprimands = (f"Sorry old chap, you said '{sin}' which is rather uncouth, I presume you meant '{hailmary}'>", f"Well I never, the nerve to say '{sin}'! Stick to '{hailmary}' in future")
+      reprimands = (f"Sorry old chap, you said '{sin}' which is rather uncouth, I presume you meant '{hailmary}'. This isn't the colonies you know.>", f"Well I never, the nerve to say '{sin}'! Stick to '{hailmary}' in future. There's a good chap.")
       reprimand = random.choice(reprimands)
+      comment.reply(reprimand)
       print(reprimand)
